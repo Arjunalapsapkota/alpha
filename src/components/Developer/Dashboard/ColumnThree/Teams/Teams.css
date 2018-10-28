@@ -1,0 +1,13 @@
+.add-team {
+    float: right;
+    margin-top: -45px;
+    margin-right: -10px;
+}
+
+.teams {
+    text-align: center;
+}
+
+.add-team:hover {
+    color: #F5B219;
+}

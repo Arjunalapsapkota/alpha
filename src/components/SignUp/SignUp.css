@@ -1,0 +1,27 @@
+.WrapperBig {
+  width: 36rem;
+  /* height: 40rem; */
+  margin: auto;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  padding-bottom: 3rem;
+
+  background-color: #3076b4;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+  color: white;
+}
+.WrapperMini {
+  padding-top: 2rem;
+  width: 32rem;
+  /* height: 35rem; */
+  margin: auto;
+}
+.valid {
+  border: 3px solid #3076b4;
+  outline: none;
+}
+.invalid {
+  border: 3px solid red;
+  outline: none;
+}
