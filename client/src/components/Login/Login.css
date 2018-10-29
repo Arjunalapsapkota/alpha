@@ -1,0 +1,53 @@
+.login-form .form-control {
+  border: 1px solid #d4d4d4;
+  font-size: 14px;
+  height: 35px;
+  line-height: 35px;
+}
+
+.main-div {
+  margin: auto;
+  max-width: 30rem;
+}
+
+.login-form .form-group {
+  margin-bottom: 10px;
+}
+.login-form {
+  text-align: center;
+}
+.something a {
+  color: #f5b219;
+  font-size: 14px;
+}
+.login-form .btn.btn-primary {
+  background: #f5b219 none repeat scroll 0 0;
+  border-color: #f5b219;
+  width: 100%;
+  height: 40px;
+  line-height: 30px;
+  font-size: 1.1rem;
+  padding: 0;
+  margin-top: 1rem;
+}
+.login-form .btn.btn-secondary {
+  background: #9316e6 none repeat scroll 0 0;
+  border-color: #f5b219;
+  width: 100%;
+  height: 40px;
+  line-height: 30px;
+  font-size: 1.1rem;
+  padding: 0;
+  margin-top: 1rem;
+}
+/* .WrapperBig {
+  width: 28rem;
+  height: 35rem;
+}
+.WrapperMini {
+  width: 24rem;
+} */
+
+.loginform-wrapper {
+  margin: 160px;
+}

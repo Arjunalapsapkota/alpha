@@ -1,0 +1,15 @@
+.devstart-brand {
+  color: #ffffff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.fixed-top {
+  height: 4.6em;
+  display: flex;
+}
+
+.header-component-right {
+  float: right;
+}

@@ -1,0 +1,13 @@
+.devstart-brand {
+  /* margin-right: 1150px; */
+  color: #ffffff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 2rem;
+  line-height: 2rem;
+  font-weight: bold;
+}
+
+.header {
+  position: absolute;
+  width: 100%;
+}

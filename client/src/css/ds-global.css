@@ -1,0 +1,38 @@
+/* DevStart Global Styles */
+
+/* CSS Variables */
+:root {
+  --ds-blue: #21639d;
+  --ds-gold: #f5b219;
+  --ds-baby-blue: #3076b4;
+  --ds-gray-blue: #72aadb;
+  --ds-gray: #e9ebee;
+  --ds-charcoal: #4a4a4a;
+}
+
+/* ds background colors */
+.bg-ds-blue {
+  background-color: var(--ds-blue);
+}
+
+.bg-ds-white {
+  background-color: #ffffff;
+}
+
+.bg-ds-gray {
+  background-color: var(--ds-gray);
+}
+
+/* ds buttons */
+
+.btn-ds-primary {
+  color: #ffffff;
+  background-color: var(--ds-blue);
+  border-color: var(--ds-blue);
+}
+
+.btn-ds-outline-primary {
+  color: #ffffff;
+  background-color: transparent;
+  border-color: #ffffff;
+}

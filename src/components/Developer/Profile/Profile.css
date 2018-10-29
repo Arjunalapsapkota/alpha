@@ -1,8 +1,0 @@
-/* Brings the profile contents down so the header doesn't block it*/
-.profile {
-  padding-top: 100px;
-}
-
-.card {
-  margin: 25px 0px;
-}

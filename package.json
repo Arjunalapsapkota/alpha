@@ -1,31 +1,41 @@
 {
-  "name": "mern-secure",
-  "version": "0.1.0",
-  "private": true,
   "dependencies": {
-    "axios": "^0.18.0",
-    "bcrypt-nodejs": "0.0.3",
-    "bluebird": "^3.5.1",
-    "body-parser": "^1.18.2",
-    "express": "^4.16.2",
-    "jsonwebtoken": "^8.1.1",
-    "mongoose": "^5.0.6",
-    "morgan": "^1.9.0",
+    "bcrypt-nodejs": "^0.0.3",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "if-env": "^1.0.4",
+    "jwt-simple": "^0.5.5",
+    "mdbreact": "^4.8.1",
+    "mongoose": "^5.3.7",
+    "morgan": "^1.9.1",
+    "mysql2": "^1.5.3",
+    "nodemon": "^1.18.4",
     "passport": "^0.4.0",
-    "passport-jwt": "^3.0.1",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-router-dom": "^4.2.2",
-    "react-scripts": "1.1.1",
-    "serve-favicon": "^2.4.5"
-  },
-  "scripts": {
-    "start": "node ./bin/www",
-    "public": "react-scripts public",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "react-columns": "^1.2.0",
+    "react-router-dom": "^4.3.1",
+    "reactstrap": "^6.5.0",
+    "sequelize": "^4.38.0"
   },
   "devDependencies": {
-    "bootstrap": "^4.0.0"
+    "concurrently": "^4.0.0"
+  },
+  "scripts": {
+    "setup": "yarn install && cd client && yarn install",
+    "build": "node internals/scripts/build.js",
+    "deploy": "yarn build && yarn checkout",
+    "checkout": "git checkout -b deploy && yarn run add",
+    "add": "git add -f client/build && yarn run commit",
+    "commit": "git commit -m \"deploy\" && yarn run push",
+    "push": "git push -f heroku deploy:master && yarn run master",
+    "master": "git checkout master && yarn run delete",
+    "delete": "git branch -D deploy",
+    "start": "concurrently --kill-others-on-fail \"yarn run server\" \"yarn run client\"",
+    "client": "node internals/scripts/client.js",
+    "server": "nodemon --watch server server/index.js",
+    "server-prod": "node server/index.js"
   }
 }

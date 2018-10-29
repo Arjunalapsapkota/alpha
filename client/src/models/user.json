@@ -1,0 +1,30 @@
+{
+  "uid": 1,
+  "firstName": "Art",
+  "lastName": "Chitamitara",
+  "image": "http://www.artawood.net/images/lego-art.png",
+  "role": "Full Stack Developer",
+  "skills": [
+    {
+      "skill": "Javascript",
+      "endorsedBy": ["Mr. Krabs", "Bugs Bunny", "Captian Planet"]
+    },
+    {
+      "skill": "Bootstrap",
+      "endorsedBy": ["SpongeBob", "Dexter", "Johnny Bravo"]
+    },
+    {
+      "skill": "HTML/CSS",
+      "endorsedBy": ["Courage", "Squidward", "Rocko"]
+    }
+  ],
+  "education": {
+    "school": "University of California, Berkeley",
+    "major": "Coding Bootcamp Full Stack Program"
+  },
+  "websites": {
+    "github": "https://github.com/artawood",
+    "linkedin": "https://linkedin/in/artawood",
+    "portfolio": "http://www.artawood.net"
+  }
+}
