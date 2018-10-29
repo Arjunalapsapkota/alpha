@@ -130,14 +130,16 @@ class Form extends Component {
         />
         <label className="mr-3"> I am developer </label>
         <hr />
+        <div className="information">
+          <a href="/login">Already Have an Account? Login Here</a>
+        </div>
         <button
           onClick={this.handleSubmit}
           type="submit"
-          className="btn btn-secondary"
+          className="btn buttonclass"
         >
           Submit
         </button>
-        {console.log(this.state)}
       </form>
     );
   }
