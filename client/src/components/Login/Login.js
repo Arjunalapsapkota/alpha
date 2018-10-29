@@ -43,78 +43,80 @@ class Login extends Component {
 
   render() {
     return (
-      <div className="container-flex">
-        <HomeHeader />
-        <BigWrapper>
-          <MiniWrapper>
-            <div>
-              <BrandSmall />
+      <div className="page_background">
+        <div className="container-flex">
+          <HomeHeader />
+          <BigWrapper>
+            <MiniWrapper>
+              <div>
+                <BrandSmall />
 
-              <div id="LoginForm">
-                <div className="container">
-                  <div className="login-form">
-                    <div className="main-div">
-                      <div className="panel">
-                        <h4>User Login</h4>
-                        <p>Please enter your email and password</p>
+                <div id="LoginForm">
+                  <div className="container">
+                    <div className="login-form">
+                      <div className="main-div">
+                        <div className="panel">
+                          <h4>User Login</h4>
+                          <p>Please enter your email and password</p>
+                        </div>
+                        <form id="Login" onSubmit={this.handleSubmit}>
+                          <div className="form-group">
+                            <input
+                              type="username"
+                              className="form-control"
+                              id="inputEmail"
+                              placeholder="username"
+                              name="username"
+                              value={this.username}
+                              onChange={this.handleInputChange}
+                            />
+                          </div>
+
+                          <div className="form-group">
+                            <input
+                              type="password"
+                              className="form-control"
+                              id="inputPassword"
+                              placeholder="Password"
+                              name="password"
+                              value={this.password}
+                              onChange={this.handleInputChange}
+                            />
+                          </div>
+                          <div className="something">
+                            <a href="reset.html">Forgot password?</a>
+                          </div>
+                          <div className="something">
+                            <a href="/signup">
+                              Dont have an Account ? Sign Up here
+                            </a>
+                          </div>
+                          <button type="submit" className="btn btn-primary">
+                            Login
+                          </button>
+                          <button
+                            className="btn btn-secondary"
+                            onClick={this.handleClick}
+                          >
+                            <i className="fab fa-facebook-square mr-1" />
+                            Login with facebook{" "}
+                          </button>
+                          <button
+                            className="btn btn-secondary"
+                            onClick={this.handleClick}
+                          >
+                            <i className="fab fa-github mr-1" />
+                            Login with github{" "}
+                          </button>
+                        </form>
                       </div>
-                      <form id="Login" onSubmit={this.handleSubmit}>
-                        <div className="form-group">
-                          <input
-                            type="username"
-                            className="form-control"
-                            id="inputEmail"
-                            placeholder="username"
-                            name="username"
-                            value={this.username}
-                            onChange={this.handleInputChange}
-                          />
-                        </div>
-
-                        <div className="form-group">
-                          <input
-                            type="password"
-                            className="form-control"
-                            id="inputPassword"
-                            placeholder="Password"
-                            name="password"
-                            value={this.password}
-                            onChange={this.handleInputChange}
-                          />
-                        </div>
-                        <div className="something">
-                          <a href="reset.html">Forgot password?</a>
-                        </div>
-                        <div className="something">
-                          <a href="/signup">
-                            Dont have an Account ? Sign Up here
-                          </a>
-                        </div>
-                        <button type="submit" className="btn btn-primary">
-                          Login
-                        </button>
-                        <button
-                          className="btn btn-secondary"
-                          onClick={this.handleClick}
-                        >
-                          <i className="fab fa-facebook-square mr-1" />
-                          Login with facebook{" "}
-                        </button>
-                        <button
-                          className="btn btn-secondary"
-                          onClick={this.handleClick}
-                        >
-                          <i className="fab fa-github mr-1" />
-                          Login with github{" "}
-                        </button>
-                      </form>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </MiniWrapper>
-        </BigWrapper>
+            </MiniWrapper>
+          </BigWrapper>
+        </div>
       </div>
     );
   }
