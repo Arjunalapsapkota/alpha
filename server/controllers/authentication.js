@@ -12,7 +12,7 @@ exports.signin = function(req, res, next) {
   //User has already had email and password authed
   //We just need to give them a token
   console.log(req.body);
-  res.json({ token: tokenForUser(req.user), msg: "hello" });
+  res.json({ token: tokenForUser(req.user), user: req.user.username });
 };
 
 exports.signup = function(req, res, next) {

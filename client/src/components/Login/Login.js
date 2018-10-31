@@ -4,12 +4,15 @@ import MiniWrapper from "../SignUp/MiniWrapper";
 import BrandSmall from "../SignUp/BrandSmall";
 import SocialButton from "./SocialButton";
 import HomeHeader from "../Global/HomeHeader";
+import { RedirectUser } from "./RedirectUser";
+import { Redirect } from "react-router-dom";
 import "./Login.css";
 
 class Login extends Component {
   state = {
     username: "",
-    password: ""
+    password: "",
+    redirect: false
   };
   handleSubmit = async event => {
     event.preventDefault();
@@ -23,11 +26,20 @@ class Login extends Component {
     });
 
     let data = await res.json();
+    console.log(`Hello, ${JSON.stringify(data.user)}`);
     // ___ saving the received token to the local storage
 
     localStorage.setItem("token", data.token);
-    // if (data.token) this.setState({ isloggedin: true });
+
+    // return <div>LOGGEDIN</div>;
+    if (data.token) this.setState({ isloggedin: true });
     // console.log(this.state);
+    this.setState({ redirect: true });
+    // window.location.href = "/developer/dashboard";
+  };
+
+  handleRedirect = () => {
+    return <Redirect to="/developer/dashboard" />;
   };
 
   handleInputChange = event => {
@@ -117,6 +129,7 @@ class Login extends Component {
             </MiniWrapper>
           </BigWrapper>
         </div>
+        {this.state.redirect ? this.handleRedirect() : null}
       </div>
     );
   }

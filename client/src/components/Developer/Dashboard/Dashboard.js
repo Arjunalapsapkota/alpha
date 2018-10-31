@@ -22,6 +22,10 @@ class Dashboard extends Component {
     this.setState({ sideDrawerOpen: false });
   };
 
+  // componentDidMount() {
+  //   console.log(this.props.msg);
+  // }
+
   render() {
     let backdrop;
     let sideDrawer;

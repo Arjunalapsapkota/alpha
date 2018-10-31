@@ -9,7 +9,7 @@ const QuickStart = () => (
 
         <div className="card-text">
           <div>
-            <ul className="nav-links">
+            <div className="nav-links">
               <a href="/#">Home</a>
               <br />
               <a href="/">Create Proposal</a>
@@ -17,7 +17,7 @@ const QuickStart = () => (
               <a href="/">Search Devs</a>
               <br />
               <a href="/">Search Teams</a>
-            </ul>
+            </div>
           </div>
         </div>
       </div>

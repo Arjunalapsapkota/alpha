@@ -8,8 +8,9 @@ import DeveloperDashboard from "./components/Developer/Dashboard/Dashboard";
 import CreateProfile from "./components/CreateProfile";
 import DeveloperProfile from "./components/Developer/Profile/Profile";
 import SponsorDashboard from "./components/Sponsor/Dashboard";
+import { RedirectUser } from "./components/Login/RedirectUser";
 //Global CSS Style
-import "./css/ds-global.css";
+//import "./css/ds-global.css";
 
 class App extends Component {
   constructor(props) {
@@ -41,7 +42,7 @@ class App extends Component {
           <Route
             path="/developer/dashboard"
             component={
-              this.state.isloggedin ? DeveloperDashboard : DeveloperDashboard
+              this.state.isloggedin ? DeveloperDashboard : RedirectUser
             }
           />
           <Route
